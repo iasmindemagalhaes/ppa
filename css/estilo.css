@@ -1,0 +1,941 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+::selection {
+    background: #FFDE59;
+    color: black;
+}
+
+body{
+    font-family: Tahoma, Arial;
+    /*background-image: linear-gradient(rgba(255, 255, 255, 0.712), rgba(255,255,255,0.8)), url("../img/pvh_distritos.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;*/
+    width: 100%;
+    height: 100%;
+}
+body #cabeca{
+    background-color:#0071CF;
+    height: auto;
+    position: relative;
+    padding: 15px;
+    align-items: center;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+        
+}
+body #cabeca #topo{
+    list-style-type: none;
+
+}
+h1{
+    font-size: 20px;
+    color: white;
+    padding-left: 30px;
+}
+h2{
+    font-size: 15px;
+    color: white;
+    padding-left: 30px;
+}
+
+h3{
+    padding-top: 10px;
+}
+
+footer{
+    background-color:#e7e7e5;
+    position: fixed;
+    clear: both;
+    opacity: 0.8;
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    text-align: center;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+
+.menu{
+    position: relative;
+    align-items: center;
+    height: 50px;
+    background-color: #457b9d;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.menu ul{
+    list-style: none;
+    position: relative;
+    border-top: solid 5px #FFDE59;
+    border-bottom: solid 5px #0071CF;
+    background-color: #0071CF;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu ul li{
+    width: 200px;
+    margin:0;
+ 
+  
+}
+
+.menu a{
+    padding: 15px;
+    display: block;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.select{
+    padding: 15px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #002d52;
+   
+}
+
+.menu a:hover{
+    background-color:#4aa6f1;
+    color: white;
+}
+
+label[for="bt_menu"]{
+    position: relative;
+    padding: 2px;
+    background-color: #002d52;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    width: 100%;
+    height: 50px;
+}
+
+#bt_menu{
+    display: none;
+}
+
+label[for="bt_menu"]{
+    display: none;
+}
+
+
+@media(max-width: 800px){
+    label[for="bt_menu"]{
+        display: block;
+    }
+
+    #bt_menu:checked ~ .menu{
+        margin-left: 0;
+    }
+
+
+    .menu{
+        margin-top: 1px;
+        margin-left: -100%;
+        transition: all .4s;
+        background-color: #002d52;
+    }
+
+    .menu ul{
+        list-style: none;
+        position: relative;
+        background-color: #FFDE59;
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu ul li{
+        width: 100%;
+        float: left;
+        border-bottom: white solid 1px; 
+    }
+    .menu a:hover{
+        background-color:#4aa6f1;
+        color: white;
+        border-bottom: 5px solid #0071CF;
+    }
+    h1{
+        font-size: 16px;
+        color: white;
+        padding-left: 10px;
+        padding-right: 35px;
+    }
+    h2{
+        font-size: 10px;
+        color: white;
+        padding-left: 10px;
+        padding-right: 25px;
+    }
+    footer{
+        font-size: 10px;
+        padding: 10px;
+    }
+    .nav_tabs{
+        width: 100%;
+        height: 900px;
+        margin: 0;
+        background-color: rgb(255, 255, 255);
+        padding: 0;
+    }
+    .nav_tabs label{
+        width: 100%;
+        height: 40px;
+        padding: 25px;
+        background-color: #4aa6f1;
+        color: white;
+        cursor: pointer;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav_tabs ul li{
+        float: left;
+    }
+    .content{
+        background-color: rgb(255, 255, 255);
+        padding: 15px;
+        display: none;
+        position: relative;
+        width: 100%;
+        height: auto;
+        float: right;
+        margin-left: auto;
+        margin-right: auto;
+        background:transparent;
+    }
+
+    .nav_tabs ul{
+        list-style: none;
+    }
+    
+    .rd_tabs:checked ~ .content{
+        display: block;
+        
+    }
+
+    .menu{
+        position: relative;
+        align-items: center;
+        width: 100%;
+        height: 50px;
+        background-color: #FFDE59;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+    
+
+}
+
+/*Menu dos eixos de desenvolvimento do Plano de Governo*/
+.conteudo-top{
+    width: 60%;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    text-align: center;
+    align-items: center;
+
+}
+.nav_tabs{
+    width: 60%;
+    height: auto;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.nav_tabs ul{
+    list-style: none;
+}
+
+.nav_tabs ul li{
+    float: left;
+}
+
+.nav_tabs label{
+    width: 200px;
+    height: 40px;
+    padding: 35px;
+    background-color: #4aa6f1;
+    display: block;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav_tabs label:hover{
+    background-color: #FFDE59;
+    border-bottom: 5px solid #0071CF;
+    color: #002d52;
+}
+
+.rd_tabs:checked ~ label{
+    border-bottom: 5px solid #0071CF;
+    background-color: #002d52;
+    color: white;
+}
+
+.rd_tabs{
+    display: none;
+}
+
+.content{
+    background-color: rgb(255, 255, 255);
+    display: none;
+    position: absolute;
+    width: 55%;
+    height: auto;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+ 
+}
+
+.rd_tabs:checked ~ .content{
+    display:block;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 55px;
+    
+}
+
+ol{
+    font-family: Arial, Helvetica, sans-serif;
+    float: none;
+    
+}
+
+
+
+.iniciativas_pg tr{
+    height: 30px;
+    font-size: 16px;
+}
+
+.general-button1{
+    width: 80%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.general-button1 img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    padding: 5px;
+    padding-bottom: 15px;
+    border-bottom: 5px solid black;
+
+}
+
+.general-button2{
+    width: 80%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.general-button2 img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    padding: 5px;
+    padding-bottom: 15px;
+    border-bottom: 5px solid black;
+
+}
+
+
+.btn-planos{
+    width: 800px;
+    height: 80px;
+    color: #f1faee;
+    background-color: #457b9d;
+    margin: 5px;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.btn-planos:hover{
+    background-color: #a8d2dc;
+    color: #002d52;
+    box-shadow: #002d52 5px 5px 3px;
+}
+
+/*Página inicial do PPA*/
+
+.boxppa{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    margin-bottom: 80px;
+}
+
+.boxppa18{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    margin-bottom: 80px;
+}
+
+
+.botaolateral{
+    margin-top: 10px;
+    margin-bottom: 50px;
+    width: 20%;
+    height: auto;
+    position: relative;
+    float: left;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.botaolateral a {
+    text-decoration: none;
+}
+
+.btn {
+    width: 300px;
+    height: 60px;
+    cursor: pointer;
+    background: #eeece1;
+    border: 1px solid #eeece1;
+    outline: none;
+    transition: 1s ease-in-out;
+    margin-bottom: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.btn img{
+    padding-right: 10px;
+}
+  
+
+.btn:hover {
+    transition: 0.2s ease-out;
+    background: #cfcec6;
+}
+ 
+.btn span {
+color: black;
+font-size: 18px;
+font-weight: 100;
+
+}
+
+.btn2 {
+    width: 300px;
+    height: 60px;
+    cursor: pointer;
+    background: #cfcec6;
+    border: 1px solid #cfcec6;
+    outline: none;
+    transition: 1s ease-in-out;
+    margin-bottom: 2px;
+  }
+  
+
+.btn2:hover {
+    transition: 0.2s ease-out;
+    background: #eeece1;
+    border: #eeece1;
+}
+ 
+.btn2 span {
+    color: black;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.conteudoppa{
+    margin-top: 10px;
+    width: 60%;
+    height: auto;
+    position: relative;
+    float: left;
+    /*border-left: 5px solid #002d52;*/
+    padding: 15px;
+}
+
+.conteudo-prog{
+    margin-top: 10px;
+    width: 60%;
+    height: auto;
+    position: relative;
+    float: left;
+    /*border-left: 5px solid #002d52;*/
+    padding: 15px;
+    margin-bottom: 50px;
+}
+
+.tabs{
+    background-color: #002d52;
+}
+
+.eixosppa{
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+}
+
+.eixosppa tr:hover {background-color: #fff;}
+
+.eixosppa tr:nth-child(even) {background-color: #fff;}
+
+
+.tb-segmentos td{
+    width: 250px;
+    padding: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.tb-segmentos tr{
+    display: flex;
+}
+
+.tb-segmentos li{
+    list-style: none;
+    padding: 5px;
+}
+
+.title-segm{
+    border-bottom: #002d52 3px solid;
+
+}
+
+p{
+    text-align: justify;
+}
+
+#cabecalhoppa{
+    display: flex;
+}
+
+#titulo1{
+    margin-top: 15px;
+    /*border-bottom: 3px solid #002d52;*/
+    text-align: left;
+    height: 30px;
+    width: 100%;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+#titulo2{
+    margin-top: 15px;
+    /*border-bottom: 3px solid #002d52;*/
+    text-align: left;
+    height: 30px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
+#objetivosppa{
+    margin-top: 25px;
+    display: flex;
+}
+
+.indicadores-prog{
+    margin-top: 15px;
+}
+
+.indicadores-prog th{
+    background-color: rgb(207, 207, 207);
+    padding: 5px;
+}
+
+.indicadores-prog td{
+    border: none;
+    padding: 10px;
+    background-color: rgb(255, 249, 239);
+}
+
+.totalfonte-prog{
+    width: 100%;
+    margin-top: 15px;
+}
+
+.totalfonte-prog th{
+    background-color: rgb(207, 207, 207);
+    padding: 10px;
+}
+
+.totalfonte-prog td{
+    border: none;
+    padding: 10px;
+    background-color: rgb(255, 249, 239);
+}
+
+.totalfonte-unid{
+    width: 100%;
+    margin-top: 15px;
+}
+
+.totalfonte-unid th{
+    background-color: rgb(207, 207, 207);
+    padding: 10px;
+    text-align: center;
+}
+
+.totalfonte-unid td{
+    border: none;
+    padding: 10px;
+    background-color: rgb(255, 249, 239);
+}
+
+.info-acoes{
+    width: 100%;
+    margin-top: 5px;
+}
+
+.info-acoes th{
+    width: 25%;
+    padding: 10px;
+    text-align: left;
+    font-size: 15px;
+}
+
+.info-acoes td{
+    border-left: #e2e2e2 solid 3px;
+    padding-left: 10px;
+    text-align: left;
+}
+
+
+#publicoalvoppa{
+    margin-top: 25px;
+    display: flex;
+}
+
+#subtitulo{
+    border-right: 3px solid #002d52;
+    padding: 5px;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+}
+
+#subtitulo2{
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    border-bottom: #002d52 5px solid;
+}
+
+#subtitulo3{
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    border-bottom: rgb(190, 190, 190) 3px solid;
+}
+
+#subtitulo-prog{
+    text-align: left;
+    font-size: 20px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    border-bottom: rgb(190, 190, 190) 5px solid;
+}
+
+#objetivos{
+    padding-left: 25px;
+    width: 780px;
+    text-align: justify;
+}
+
+#objetivos-prog{
+    border-right: 3px solid rgb(190, 190, 190);
+    padding: 5px;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+}
+
+#publicoalvo{
+    padding-left: 25px;
+    width: 780px;
+    text-align: justify;
+}
+
+#publico-alvo{
+    border-right: 3px solid rgb(190, 190, 190);
+    padding: 5px;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+}
+
+#justificativappa{
+    margin-top: 25px;
+    display: flex;
+}
+
+#justificativa{
+    padding-left: 25px;
+    width: 780px;
+    text-align: justify;
+}
+
+#justificativa-prog{
+    border-right: 3px solid rgb(190, 190, 190);
+    padding: 5px;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+}
+
+.tabs-ppa{
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    background-color: rgb(255, 255, 255);
+}
+
+.tabs-ppa ul{
+    list-style: none;
+}
+
+.tabs-ppa ul li{
+    float: left;
+}
+
+.tabs-ppa label{
+    width: 240px;
+    height: 45px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-bottom: #FFDE59 5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-right: 10px;
+    font-size: 22px;
+}
+
+.tabs-ppa label:hover{
+    background-color: #4aa6f1;
+    cursor: pointer;
+}
+
+.tabs-ppa2{
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    background-color: rgb(255, 255, 255);
+}
+
+.tabs-ppa2 ul{
+    list-style: none;
+}
+
+.tabs-ppa2 ul li{
+    float: left;
+}
+
+.tabs-ppa2 label{
+    width: 130px;
+    height: 45px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-bottom: #FFDE59 5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-right: 10px;
+    font-size: 22px;
+}
+
+.tabs-ppa2 label:hover{
+    background-color: #4aa6f1;
+    cursor: pointer;
+}
+
+.ppa_tabs:checked ~ label{
+    border-bottom: #002d52 5px solid;
+}
+
+.ppa_tabs{
+    display: none;
+}
+
+.conteudoestppa{
+    display: none;
+    position: absolute;
+    text-align: left;
+    height: auto;
+    width: 100%;
+    left: 0;
+}
+
+.conteudoestppa article{
+    padding: 15px;
+}
+
+.ppa_tabs:checked ~ .conteudoestppa {
+    display: block;
+}
+
+/*Botões dos programas do PPA*/
+
+.programas1, .programas2{
+    margin-top: 30px;
+    width: 50%;
+    position: relative;
+    left: 0px;
+    float: left;
+}
+
+
+.botaoprogramas{
+    margin: 5px;
+  
+}
+
+.btn-prog {
+    width: 100%;
+    height: 60px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 1);
+    border: 3px solid #002d52;
+    border-radius: 15px;
+    outline: none;
+    margin-bottom: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+  
+}
+
+.btn-prog:hover {
+    transition: 0.2s ease-out;
+    background-color: rgba(139, 212, 255, 0.507);
+    border: 3px solid #4aa6f1;
+}
+
+/*Botões das ações dos programas do PPA*/
+
+.botaoacoes{
+    margin: 5px;
+}
+
+.btn-acao {
+    width: 100%;
+    height: 60px;
+    cursor: pointer;
+    background-color: rgb(218, 218, 218);
+    border: 3px solid rgb(218, 218, 218) ;
+    border-radius: 15px;
+    outline: none;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18px;
+}
+
+.btn-acao:hover {
+    transition: 0.2s ease-out;
+    background-color: rgb(153, 153, 153);
+    border: 3px solid rgb(153, 153, 153);
+}
+
+.btn-voltar{
+    width: 80px;
+    height: 50px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 15px;
+}
