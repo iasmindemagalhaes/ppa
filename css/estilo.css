@@ -51,10 +51,10 @@ footer{
     background-color:#e7e7e5;
     position: fixed;
     clear: both;
-    opacity: 0.8;
+    opacity: 1.0;
     width: 100%;
     height: 50px;
-    bottom: 0;
+    bottom: 0px;
     text-align: center;
     display: flex; 
     align-items: center; 
@@ -87,8 +87,6 @@ footer{
 .menu ul li{
     width: 200px;
     margin:0;
- 
-  
 }
 
 .menu a{
@@ -139,7 +137,7 @@ label[for="bt_menu"]{
 }
 
 
-@media(max-width: 800px){
+@media(max-width: 1800px){
     label[for="bt_menu"]{
         display: block;
     }
@@ -231,7 +229,6 @@ label[for="bt_menu"]{
     
     .rd_tabs:checked ~ .content{
         display: block;
-        
     }
 
     .menu{
@@ -244,7 +241,6 @@ label[for="bt_menu"]{
         font-weight: bold;
     }
     
-
 }
 
 /*Menu dos eixos de desenvolvimento do Plano de Governo*/
@@ -427,7 +423,7 @@ ol{
     width: 100%;
     height: auto;
     overflow: auto;
-    margin-bottom: 80px;
+    margin-bottom: 20px;
 }
 
 .boxppa18{
@@ -437,7 +433,7 @@ ol{
     width: 100%;
     height: auto;
     overflow: auto;
-    margin-bottom: 80px;
+    margin-bottom: 20px;
 }
 
 
@@ -533,7 +529,7 @@ font-weight: 100;
     float: left;
     /*border-left: 5px solid #002d52;*/
     padding: 15px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .tabs{
@@ -939,3 +935,12 @@ p{
     cursor: pointer;
     font-size: 15px;
 }
+
+.btn-imprimir{
+    width: 80px;
+    height: 50px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1S5px;
+}
+
